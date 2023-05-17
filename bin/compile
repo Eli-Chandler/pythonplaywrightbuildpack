@@ -2,8 +2,6 @@
 set -eo pipefail
 
 echo "-----> Setting up Playwright"
-export PLAYWRIGHT_BROWSERS_PATH="$HOME/.local-browsers"
 playwright install
-playwright install-deps
 
 echo "-----> Buildpack compilation completed!"
