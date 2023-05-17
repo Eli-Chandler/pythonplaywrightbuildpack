@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+echo "-----> Installing Playwright dependencies"
+apt-get update
+apt-get install -y chromium
+
+echo "-----> Installing Python dependencies"
+pip install -r requirements.txt
+
+echo "-----> Setting up Playwright"
+playwright install-deps
+
+echo "-----> Buildpack compilation completed!"
